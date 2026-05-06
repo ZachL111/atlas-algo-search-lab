@@ -1,0 +1,17 @@
+{
+  "repo": "atlas-algo-search-lab",
+  "thresholds": {
+    "signal": 4,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 5,
+    "ship": 182,
+    "watch": 111
+  },
+  "terms": [
+    "input width",
+    "search depth",
+    "boundary pressure",
+    "complexity"
+  ]
+}
