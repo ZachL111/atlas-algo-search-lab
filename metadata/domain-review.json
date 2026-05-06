@@ -1,0 +1,73 @@
+{
+  "repo": "atlas-algo-search-lab",
+  "language": "OCaml",
+  "category": "Algorithms",
+  "goal": "Package an OCaml local lab for search analysis with safe and unsafe fixtures, remediation hints, and documented operating limits.",
+  "review_model": {
+    "terms": [
+      "input width",
+      "search depth",
+      "boundary pressure",
+      "complexity"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "input width",
+      "signal": 42,
+      "slack": 51,
+      "drag": 11,
+      "confidence": 61,
+      "score": 163,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "search depth",
+      "signal": 68,
+      "slack": 48,
+      "drag": 15,
+      "confidence": 74,
+      "score": 213,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "boundary pressure",
+      "signal": 74,
+      "slack": 43,
+      "drag": 15,
+      "confidence": 52,
+      "score": 198,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "complexity",
+      "signal": 78,
+      "slack": 49,
+      "drag": 12,
+      "confidence": 84,
+      "score": 253,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "input width",
+      "signal": 81,
+      "slack": 30,
+      "drag": 18,
+      "confidence": 54,
+      "score": 192,
+      "lane": "ship"
+    }
+  ]
+}
